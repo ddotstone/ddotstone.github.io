@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding: 0;
-    background: url(images/Backround.jpg) no-repeat;
+    background: url("images/Backround.jpg") no-repeat;
     background-size: cover;
 }
 .box{

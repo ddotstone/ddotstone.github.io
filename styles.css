@@ -1,19 +1,95 @@
+*{
+    text-decoration: none;
+    font-family: 'Century Gothix',sans-serif;
+    box-sizing: border-box;
+    box-shadow: rgba(255, 255, 255, 0.1);
+    
+}
+header{
+   position: fixed;
+   top: 0;left: 0;right: 0;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 0px 7%;
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+   text-decoration: none;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: whitesmoke;
+}
+header .navbar ul{
+    list-style: none;
+    text-decoration: none;
+    margin:0; padding: 0;
+
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color:whitesmoke;
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    background: whitesmoke;
+    color: black;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgba(0, 0, 0, 1);
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20;
+    color: whitesmoke;
+    cursor: pointer;
+    display: none;
+}
 body{
     margin:0;
     padding: 0;
+    min-height: 100vh;
     background-image: url("images/Backround.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .box{
-    width: 100%;
+    width: 70%;
     background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
+    padding: 10%;
     text-align: center;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-bottom: 5%;
     color: white;
     font-family: 'Century Gothix',sans-serif;
+    z-index: 500;
 
 }
 .box-img{
@@ -34,7 +110,7 @@ body{
 .box p{
     text-align: justify;
 }
-ul{
+.box ul{
     margin: 0;
     padding: 0;
 }
@@ -71,4 +147,41 @@ ul{
 }
 .menu-icon:hover{
     color: #b9b9b9;
+}
+
+@media (max-width:991px) {
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left:0; right:0;
+        background: black;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background: rgb(44, 44, 44);
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left:0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+
+
 }

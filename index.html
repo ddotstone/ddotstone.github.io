@@ -9,22 +9,23 @@
 </head>
 <body>
     
-    <header>
-        <a href = "#" class = "logo">Logo</a>
+    <header id = "navbar">
+        <a href = "#" class = "logo">TJ</a>
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar">Menu</label>
         <nav class="navbar">
         <ul>
-            <li><a href="#">Home +</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a>
             <ul>
-                    <li><a href="#">HTML and CSS</a></li>
-                    <li><a href="#">C++</a></li>
-                    <li><a href="#">Python</a> </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/projects.html">Projects -</a>
+                <ul>
+                        <li><a href="pages/html_css.html">HTML and CSS</a></li>
+                        <li><a href="pages/c++.html">C++</a></li>
+                        <li><a href="pages/python.html">Python</a> </li>
+                </ul>
+            </li>
             </ul>
-        </li>
-        </ul>
     </nav>
     </header>
     <div class="box">
@@ -37,5 +38,6 @@
             <li><a href="https://www.linkedin.com/in/todd-johnston-18288423b/"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
     </div>
+<script src="javascript.js"></script>
 </body>
 </html>

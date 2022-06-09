@@ -1,12 +1,23 @@
 
 function changeColor(){
-var nav = document.getElementById('navbar');
-var scrollValue = window.scrolly;
+var header = document.getElementById('header');
+var logo = document.getElementById('logo');
+var navbar = document.getElementById('navbar');
 
-if (window.scrollValue >= 5) {
-    nav.classList.add('active_nav');
+
+
+var menu = document.getElementById('menu');
+var scrollValue = window.scrollY;
+
+if (scrollValue >= 5) {
+    header.classList.add('active_nav');
+    logo.classList.add('logo_scroll');
+    navbar.classList.add('navbar_scroll');
+
 } else {
-    nav.classList.remove('active_nav');
+    header.classList.remove('active_nav');
+    logo.classList.remove('logo_scroll');
+    navbar.classList.remove('navbar_scroll');
 
 }
 }

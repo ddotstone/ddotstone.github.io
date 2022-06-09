@@ -1,5 +1,6 @@
 .active_nav {
-    background-color: whitesmoke !important;
+    background: whitesmoke;
+    transition: all ease-in-out 250ms;
 }
 
 *{
@@ -7,6 +8,8 @@
     font-family: 'Century Gothix',sans-serif;
     box-sizing: border-box;
     box-shadow: rgba(255, 255, 255, 0.1);
+    transition: all ease-in-out 250ms;
+
     
 }
 header{
@@ -19,6 +22,7 @@ header{
    justify-content: space-between;
    z-index: 1000;
    text-decoration: none;
+   transition: all ease-in-out 250ms;
 }
 header .logo{
     font-weight: bolder;
@@ -26,6 +30,9 @@ header .logo{
     font-size: 25px;
     color: whitesmoke;
     transition: 200ms ease-in-out color;
+}
+header .logo_scroll{
+    color:black;
 }
 header .navbar ul{
     list-style: none;
@@ -45,10 +52,17 @@ header .navbar ul li a{
     transition: 200ms ease-in-out background-color;
 
 }
+header .navbar_scroll ul li a{
+    color:black;
+}
 
 header .navbar ul li a:hover{
     background: whitesmoke;
     color: black;
+}
+header .navbar_scroll ul li a:hover{
+    background: black;
+    color: whitesmoke;
 }
 header .navbar ul li ul{
     position: absolute;
@@ -56,6 +70,9 @@ header .navbar ul li ul{
     width: 200px;
     background: rgba(0, 0, 0, 1);
     display: none;
+}
+header .navbar_scroll ul li ul{
+    background: whitesmoke;
 }
 header .navbar ul li ul li{
     width: 100%;
@@ -78,16 +95,8 @@ header label{
     cursor: pointer;
     display: none;
 }
-.change-color {
-   background: whitesmoke;
-   color: black
-}
-.change-color a{
-    color: black;
-}
-header .change-color ul li a:hover{
-color: whitesmoke;
-background: black;
+.active_nav label{
+color:black;
 }
 
 body{
@@ -216,6 +225,9 @@ body{
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         display: none;
     }
+    header .navbar_scroll{
+        background: whitesmoke;
+    }
     header .navbar ul li{
         width: 100%;
     }
@@ -224,7 +236,7 @@ body{
         width: 100%;
     }
     header .navbar ul li ul li{
-        background: rgb(44, 44, 44);
+        background: rgb(131, 131, 131);
     }
 
     header .navbar ul li ul li ul{

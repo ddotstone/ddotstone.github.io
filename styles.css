@@ -139,6 +139,13 @@ body{
     letter-spacing: 4px;
     font-weight: 100;
 }
+#project .box h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
+
+}
 .box h5{
     font-size: 30px;
     font-family: 'Chalkduster', fantasy;

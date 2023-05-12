@@ -141,6 +141,7 @@ body{
 }
 .box h5{
     font-size: 30px;
+    font-family: 'Chalkduster', fantasy;
     letter-spacing: 3px;
     font-weight: 100;
 }

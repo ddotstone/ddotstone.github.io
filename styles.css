@@ -143,8 +143,6 @@ body{
 }
 #project {
     font-weight: 600;
-    background-image: radial-gradient(circle, #5c210e, #ffffff);
-    color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     font-family: 'Roboto', sans-serif;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .active_nav {
-    background: whitesmoke;
+    background: rgba(240,230,230,1);
     transition: all ease-in-out 250ms;
 }
 
@@ -9,7 +9,7 @@
     text-decoration: none;
     font-family: 'Century Gothix',sans-serif;
     box-sizing: border-box;
-    box-shadow: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(240, 230, 230, 0.1);
     transition: all ease-in-out 250ms;
 
     
@@ -30,7 +30,7 @@ header .logo{
     font-weight: bolder;
     font-family: cursive;
     font-size: 25px;
-    color: whitesmoke;
+    color: rgba(240,230,230,1);
     transition: 200ms ease-in-out color;
 }
 header .logo_scroll{
@@ -74,11 +74,11 @@ header .navbar ul li ul{
     display: none;
 }
 header .navbar_scroll ul li ul{
-    background: whitesmoke;
+    background: rgba(240,230,230,1);
 }
 header .navbar ul li ul li{
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(240, 230, 230, 0.1);
 }
 header .navbar ul li ul li ul{
     left: 200px;
@@ -93,7 +93,7 @@ header .navbar ul li:hover > ul{
 }
 header label{
     font-size: 20;
-    color: whitesmoke;
+    color: rgba(240,230,230,1);
     cursor: pointer;
     display: none;
 }
@@ -118,7 +118,7 @@ body{
     margin: auto;
     margin-top: 90px;
     margin-bottom: 30px;
-    color: white;
+    color: rgba(240,230,230,1);
     font-family: 'Century Gothix',sans-serif;
     z-index: 500;
 
@@ -185,18 +185,18 @@ body{
     list-style: none;
 }
 .box li a{
-    color: white;
+    color: rgba(240,230,230,1);
     text-decoration: none;
     font-size: 60px;
 }
 .box a{
-    color: white;
+    color: rgba(240,230,230,1);
     text-decoration: none;
     font-size: 60px;
 
 }
 .box a p{
-    color: white;
+    color: rgba(240,230,230,1);
     text-decoration: none;
     font-size: 25px;
     text-align: center;
@@ -236,7 +236,7 @@ body{
     top: 20px;
     right: 10px;
     cursor: pointer;
-    color: whitesmoke;
+    color: rgba(240,230,230,1);
     transition: all ease-in-out 250ms;
 }
 .menu-icon:hover{
@@ -258,7 +258,7 @@ body{
         display: none;
     }
     header .navbar_scroll{
-        background: whitesmoke;
+        background: rgba(240,230,230,1);
     }
     header .navbar ul li{
         width: 100%;

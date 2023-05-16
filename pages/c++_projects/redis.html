@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/800bfb88ee.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../../styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Personal-Website</title>
+</head>
+<body>
+    <header id = "header">
+        <a href = "../index.html" class = "logo" id = "logo">TJ</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects -</a>
+                <ul>
+                        <li><a href="../html_css.html">HTML and CSS</a></li>
+                        <li><a href="../c++.html">C++</a>
+                            <ul>
+                            <li><a href="#">Simple Redis</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../python.html">Python</a> </li>
+                </ul>
+                </li>
+            </ul>
+    </nav>
+    </header>
+
+    <div class="box">
+        <h1 id = "project">Simple Redis</h1>
+        <a href="https://github.com/ddotstone/Simple-Redis"><br><h5>Full Code</h5></a> 
+        <p class = "description">This is a simple redis that implements sockets in order to handle trasmission of data between a server and a client. It demonstrates an understanding
+            of the use of basic networking techniches, bit transfer, and the epoll() function in order to monitor the availability of connections, and then the transfer of data for those connections.
+        </p>
+        <p class = "description">The first was monitoring for an initial connection using a listening socket. To do this I passed the file descriptor of a listening socket to a epoll() instance.
+        </p>
+        <img class ="box-img-width" src="../../images/Monitoring_Initial_Connection.png" alt="Initial Listening Socket">
+        <p class = "description">
+            I then used a while loop to wait for the listening pocket find a connection. When it does, we add the file descriptor of that connection to our epoll() instance. We continue this loop, each time executing whatever i/o data is available from the connection and adding new connections as they become available. 
+        </p>
+        <img class ="box-img-width" src="../../images/Connection Monitoring Loop Code.png" alt="Loop for Monitoring Connections">
+        <p class = "description">We the use some trivial code to do the bit transfers for the client and the server. I implemented three commands, set (to create a connection), get (to get the data from that connection), and del(to remove a connection). In this way we can monitor the data stored in our server by making connection from out client. We first run our server, and create a socket to listen from.
+        </p>
+        <img class ="box-img-width" src="../../images/Server_Running.png" alt="Running Server">
+        <p class = "description">We are then able to send commands from a client, set data values, get those data values, and delete those values.
+        </p>
+        <img class ="box-img-width" src="../../images/Using_Client.png" alt="Send commands from client">
+    </div>
+    <script src="../../javascript.js"></script>
+</body>

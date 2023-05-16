@@ -81,8 +81,9 @@ header .navbar ul li ul li{
     border-top: 1px solid rgba(240, 230, 230, 0.1);
 }
 header .navbar ul li ul li ul{
-    left: 200px;
+    left: -200px;
     top: 0;
+    background-color: rgb(153,95,70);
 }
 header .navbar ul li:focus-within > ul,
 header .navbar ul li:hover > ul{
@@ -103,6 +104,7 @@ color:black;
 
 body{
     margin:0;
+    margin-top: 0;
     padding: 0;
     min-height: 100vh;
     background-image: url("images/Background.jpg");
@@ -116,8 +118,8 @@ body{
     padding: 10%;
     text-align: center;
     margin: auto;
-    margin-top: 90px;
-    margin-bottom: 30px;
+    margin-top: 10%;
+    margin-bottom: 10%;
     color: rgba(240,230,230,1);
     font-family: 'Century Gothix',sans-serif;
     z-index: 500;
@@ -276,6 +278,9 @@ body{
     header .navbar ul li ul li ul{
         width: 100%;
         left:0;
+    }
+    header .navbar ul li ul li ul li{
+        background: rgb(0, 0, 0);
     }
     #menu-bar:checked ~ .navbar{
         display: initial;

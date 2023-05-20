@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/800bfb88ee.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../../styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Personal-Website</title>
+</head>
+<body>
+    <header id = "header">
+        <a href = "../index.html" class = "logo" id = "logo">TJ</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects -</a>
+                <ul>
+                        <li><a href="../html_css.html">HTML and CSS</a></li>
+                        <li><a href="../c++.html">C++</a>
+                            <ul>
+                            <li><a href="redis.html">Simple Redis</a></li>
+                            <li><a href = "sfml_game.html">RPG Game</a></li>
+                            <li><a href = "#">Datalog Reader</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../python.html">Python</a> </li>
+                </ul>
+                </li>
+            </ul>
+    </nav>
+    </header>
+
+    <div class="box">
+        <h1 id = "project">Datalog Reader</h1>
+        <a href="https://github.com/ddotstone/DatalogReader"><h5>Full Code</h5></a> 
+        <p class = "description">
+            This project is a program that reads plain text from a file in a datalog format and is able to interpret that text to provide answers 
+            to certain queries. The project demonstrates an understanding of graph theory and Object Oriented Programming.
+        </p>
+        <h4>Reading Text</h4>
+        <img class ="box-img-width" src="../../images/DATALOG_SCANNER/datalog_text.png" alt="Example Text">
+        <p class = "description">
+            The first step in this program is reading text from a txt file. In order to do this, I implemented a state machine that would understand what text should be next, read that text, descide if the text fit withing the guidlines
+             and the interpret that text into objects. If the text was not in the correct format, it would send an error to the system and abort the program. An example segment from the scanning code can be found below.
+        </p>
+        <img class ="box-img-width" src="../../images/DATALOG_SCANNER/scanning_example.png" alt="Scanner">
+        <p class = "description">
+            The scanned tokens will then be seperated out into rules, schemes, facts and queries. These are stored in vectors withing a Datalog objects. The program contains objects for schemes, rules and queries, each containing their own object for names, and object for their values. 
+        </p>
+        <img class ="box-img-width" src="../../images/DATALOG_SCANNER/datalog_class.png" alt="Datalog Class">
+        <h4>Analyzing Data</h4>
+        <p class = "description">
+            The program then begins the task of sorting out all the information in order to find the solutions to all the queries. 
+             The first step was to find create a table with all the schemes and to stash the facts under to corresponding schemes. Following this we created a 
+             dependency graph based on the rules given in the text. For example if R1 was based on R2 and R2, the R2 and R3 were dependencies of R1. After creating a graph based on the rules
+              the next step is to anaylze the graph and iterate over all the rules adding new facts as they are found until you iterate over all the rules until there are no more facts added. The way in which
+               we anaylze the rules is to first combine all table rules that the rule you are looking at depends on using union, then to only keep the variables that we are focusing on, then rename the rows to what they will be in our table for the rule. By using a set we can 
+               monitor when a new fact is added to the table. After analyzing all the rules we will have a full table of all of our facts after implementing the rules.   
+        </p>
+        <img class ="box-img-width" src="../../images/DATALOG_SCANNER/rule_evaluation.png" alt="Rule Evaluation">
+        <p class = "description">
+            The last step in the project is to evaluate the queries based on the facts that we have found. In order to do this we 
+            first find the relation that will be related to the query by name. We then grab the parameters that are related to our query, letting those not defined be
+             any value. In doing this we can find all solutions to the queries we are given.
+        </p>
+        <img class ="box-img-width" src="../../images/DATALOG_SCANNER/query_evaluation.png" alt="Query Evaluation">
+    </div>
+    <script src="../../javascript.js"></script>
+</body>

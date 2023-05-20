@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/800bfb88ee.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../../styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Personal-Website</title>
+</head>
+<body>
+    <header id = "header">
+        <a href = "../index.html" class = "logo" id = "logo">TJ</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects -</a>
+                <ul>
+                        <li><a href="../html_css.html">HTML and CSS</a></li>
+                        <li><a href="../c++.html">C++</a>
+                            <ul>
+                            <li><a href="redis.html">Simple Redis</a></li>
+                            <li><a href = "#">RPG Game</a></li>
+                            <li><a href = "datalog_reader.html">Datalog Reader</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../python.html">Python</a> </li>
+                </ul>
+                </li>
+            </ul>
+    </nav>
+    </header>
+
+    <div class="box">
+        <h1 id = "project">SFML Game</h1>
+        <a href="https://github.com/ddotstone/RPG_Game"><h5>Full Code</h5></a> 
+        <p class = "description">This is a simple implementation of an RPG game using gamestates classes that inherit from an orignial game state. Each gamestate has its own unique qualities that allow for the game to have varying states while also keeping the implementation of new states simple.
+        </p>
+        <p class = "description">
+            In order to create the game, the first step was to create a base state class from which all other states would inherit. The base class initialize a the rendew window, the supported keys, the keybinds, a bool for the quit state, and the mouse position and qualities. 
+            The state would hold several virtual classes that would need to be implemented by each base state, that would perform various functions such as checking if the endState has been met, rendereing objects, and getting mouse position. 
+        </p>
+        <img class ="box-img-width" src="../../images/SFML_GAME_IMAGES/State_class.png" alt="State Class">
+        <p class = "description">
+            So far I have implemented two states within the game, the main menu state, and the game state. In the mainmenu state, 
+            there are two buttons, one that will quit the game, and another that will push the game state onto the stack of states. 
+            The buttons are implemented by creating a rectengle in the window and listening for if the mouse is within that rectangle,
+             and a mouse click occurs.
+        </p>
+        <img class ="box-img-width" src="../../images/SFML_GAME_IMAGES/mainmenu_state.png" alt="Main Menu State">
+        <p class = "description">
+            The next state is the game state. The game state contains a rectangle that moves according to user input using the w,a,s, and d keys. The key inputs can be change by editing a txt file associated with each state. In order to capture movement of the when button is pressed, that object associated is moved and then the new windows is rendered to the screen. 
+        </p>
+        <img class ="box-img-width" src="../../images/SFML_GAME_IMAGES/game_state_capture_movement.png" alt="Capture Movement">
+        <img class ="box-img-width" src="../../images/SFML_GAME_IMAGES/game_state.png" alt="Game State">
+        <p class = "description">
+            This project is still in prgress, but the next stemps are to add more depth to both the game_state and main_menu states and begin to add objects with more properties like the player and items.
+        </p>
+    </div>
+    <script src="../../javascript.js"></script>
+</body>

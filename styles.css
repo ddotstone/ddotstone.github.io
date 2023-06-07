@@ -130,6 +130,10 @@ body{
     width: 200px;
     height: 200px;
 }
+.box-img-width-small{
+    width: 70%;
+    border-radius: 5%;
+}
 .box-img-width{
     width: 100%;
     border-radius: 5%;

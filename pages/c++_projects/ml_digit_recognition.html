@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/800bfb88ee.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../../styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Personal-Website</title>
+</head>
+<body>
+    <header id = "header">
+        <a href = "../index.html" class = "logo" id = "logo">TJ</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects -</a>
+                <ul>
+                        <li><a href="../html_css.html">HTML and CSS</a></li>
+                        <li><a href="../c++.html">C++</a>
+                            <ul>
+                            <li><a href="redis.html">Simple Redis</a></li>
+                            <li><a href = "sfml_game.html">RPG Game</a></li>
+                            <li><a href = "datalog_reader.html">Datalog Reader</a></li>
+                            <li><a href = "light_following_robot.html">Light Following Robot</a></li>
+                            <li><a href = "#">ML Digit Reader</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../python.html">Python</a> </li>
+                </ul>
+                </li>
+            </ul>
+    </nav>
+    </header>
+
+    <div class="box">
+        <h1 id = "project">MAchine Learning Digit Recognizer</h1>
+        <a href="https://github.com/ddotstone/Digit_Reader"><h5>Full Code</h5></a> 
+        <p class = "description">This program implements a Neural Network learning algorithm in order to learn to recognize a series of handwritten digits to 95% accuracy, and with modifications, can be enabled to run 
+            with much greater accuracy.        </p>
+        <p class = "description">
+            In order to achive this accuracy, I used a combination of stochiastic gradient descent and backtracking. By using the Eigen package the program is able to do this faster than using vectors alone.
+        </p>
+        <p class = "description">
+            The neural net I am using for this project contains three layer. An input layer of 784 node representing a pixel in an 28 by 28 image, a hidden layer of 30 nodes, and 
+            an output layer of 10 nodes, each representing a digit. The learing values is set at 3.0, which has been calculate using a trial and error system to determine the most efficient 
+            value.
+        </p>
+        
+        <p class = "description">
+            The first step in creating a learning algorithm was to read in the training data. The specifics of where the values were stored and how many iteration were to be
+            used were stored in an inputs filed and is requested upon initial run.
+        </p>
+
+        <img class ="box-img-width-small" src="../../images/ML_DIGIT_RECOGNIZER/Input file and reading data.png" alt="Input file and reading data">
+        <p class = "description">
+            The next step was to then train the algorithm. This can be done in epochs, where each epoch can work of the back of the previous epochs changes to the weights and biases of the neural nets.
+            By shuffling the total input data digit by digit, and then running through a backdrop iteration for a small group of data, the program is able to reach a 
+            local minimum error value much faster, as the approximation for some small group of data are close to the change needed for the full set. Hence the program made use of "mini batches".
+        </p>
+        <img class ="box-img-width" src="../../images/ML_DIGIT_RECOGNIZER/sgd.png" alt="Code for SGD">
+        <img class ="box-img-width" src="../../images/ML_DIGIT_RECOGNIZER/backdrop.png" alt="Code for Backdrop">
+        
+        <p class = "description">
+            As the code repeated over 30 epochs, it can be seen that it reached a maximum efficienct of around 95%, which with some slight modification can imporve immensily. This demonstrates the power of neuran nets, and machine learning.
+        </p>
+        <img class ="box-img-width-small" src="../../images/ML_DIGIT_RECOGNIZER/first epoch.png" alt="First Epoch">
+        <img class ="box-img-width-small" src="../../images/ML_DIGIT_RECOGNIZER/final epoch.png" alt="Final Epoch">
+        
+    </div>
+    <script src="../../javascript.js"></script>
+</body>
+

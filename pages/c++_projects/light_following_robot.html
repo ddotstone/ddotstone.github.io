@@ -22,10 +22,10 @@
                         <li><a href="../html_css.html">HTML and CSS</a></li>
                         <li><a href="../c++.html">C++</a>
                             <ul>
-                            <li><a href="#">Simple Redis</a></li>
+                            <li><a href="redis.html">Simple Redis</a></li>
                             <li><a href = "sfml_game.html">RPG Game</a></li>
                             <li><a href = "datalog_reader.html">Datalog Reader</a></li>
-                            <li><a href = "light_following_robot.html">Light Following Robot</a></li>
+                            <li><a href = "#">Light Following Robot</a></li>
                             <li><a href = "ml_digit_recognition.html">ML Digit Reader</a></li>
                             </ul>
                         </li>
@@ -37,12 +37,15 @@
     </header>
 
     <div class="box">
-        <h1 id = "project">Simple Redis</h1>
-        <a href="https://github.com/ddotstone/Simple-Redis"><h5>Full Code</h5></a> 
-        <p class = "description">This is a simple redis that implements sockets in order to handle trasmission of data between a server and a client. It demonstrates an understanding
-            of the use of basic networking techniches, bit transfer, and the epoll() function in order to monitor the availability of connections, and then the transfer of data for those connections.
+        <h1 id = "project">Light Following Robot</h1>
+        <a href="https://github.com/ddotstone/Light_Following_Robot"><h5>Full Code</h5></a> 
+        <p class = "description">
+            This projects is a light following robot that implements a plan, perception, action coding structure in order to 
+            read input from various sensors atttached to the robot and then implments the correct response based on pre-planned responses.
         </p>
-        <p class = "description">The first was monitoring for an initial connection using a listening socket. To do this I passed the file descriptor of a listening socket to a epoll() instance.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r7_1FNwX_7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p class = "description">
+            The program's main loop consists a 
         </p>
         <img class ="box-img-width" src="../../images/Monitoring_Initial_Connection.png" alt="Initial Listening Socket">
         <p class = "description">
